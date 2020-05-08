@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Event App UI</string>
+    <string name="time_date"><![CDATA[Time & Date]]></string>
+    <string-array name="date_spinner">
+        <item>Select Date</item>
+    </string-array>
+
+    <string-array name="time_spinner">
+        <item>Select Time</item>
+    </string-array>
+</resources>
