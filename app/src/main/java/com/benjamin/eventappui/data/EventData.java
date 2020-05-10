@@ -1,4 +1,4 @@
-package com.benjamin.eventappui;
+package com.benjamin.eventappui.data;
 
 /*
  * Created by OPARA BENJAMIN

@@ -1,4 +1,4 @@
-package com.benjamin.eventappui;
+package com.benjamin.eventappui.activity;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
@@ -8,9 +8,13 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.benjamin.eventappui.data.EventAdapter;
+import com.benjamin.eventappui.data.EventData;
+import com.benjamin.eventappui.R;
+
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class EventActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CreateEventActivity.class);
+                Intent intent = new Intent(EventActivity.this, CreateEventActivity.class);
                 startActivity(intent);
             }
         });
@@ -42,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         TextView eventCount = findViewById(R.id.event_count);
         eventCount.setText("You have " + eventData.size() + " events");
 
-        EventAdapter adapter = new EventAdapter(MainActivity.this, eventData);
+        EventAdapter adapter = new EventAdapter(EventActivity.this, eventData);
         ListView listView = findViewById(R.id.event_list_view);
         listView.setAdapter(adapter);
     }
